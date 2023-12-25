@@ -9,3 +9,5 @@ dist/
 *.seed
 *.pid.lock
 .DS_Store
+
+package-lock.json
