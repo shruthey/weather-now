@@ -26,7 +26,6 @@ class Home extends React.Component {
         key={city}
         onClick={() => this.selectCity(city)}
       >
-        <img className="city-image" src={`${city}.jpg`} alt={cityName} />
         <div className="city-name">{cityName}</div>
       </div>
     );
