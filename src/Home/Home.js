@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.css"; // Import the CSS file for styling
 
 class Home extends React.Component {
   constructor(props) {
@@ -19,11 +20,13 @@ class Home extends React.Component {
   renderCityBox(city, cityName) {
     return (
       <div
-        className={`city ${city === this.state.selectedCity ? "selected" : ""}`}
+        className={`city-box ${
+          city === this.state.selectedCity ? "selected" : ""
+        }`}
         key={city}
         onClick={() => this.selectCity(city)}
       >
-        <img src={`${city}.jpg`} alt={cityName} />
+        <img className="city-image" src={`${city}.jpg`} alt={cityName} />
         <div className="city-name">{cityName}</div>
       </div>
     );
@@ -33,11 +36,35 @@ class Home extends React.Component {
     return (
       <>
         {/* ... existing code ... */}
-        <div className="city-box">
+        <div className="city-container">
+          {/* European Cities */}
           {this.renderCityBox("paris", "Paris")}
-          {this.renderCityBox("tokyo", "Tokyo")}
+          {this.renderCityBox("london", "London")}
+          {this.renderCityBox("berlin", "Berlin")}
+          {this.renderCityBox("madrid", "Madrid")}
+          {this.renderCityBox("rome", "Rome")}
+
+          {/* US Cities */}
           {this.renderCityBox("new-york", "New York")}
-          {/* Add more city boxes as needed */}
+          {this.renderCityBox("los-angeles", "Los Angeles")}
+          {this.renderCityBox("chicago", "Chicago")}
+          {this.renderCityBox("miami", "Miami")}
+          {this.renderCityBox("san-francisco", "San Francisco")}
+          {this.renderCityBox("las-vegas", "Las Vegas")}
+          {this.renderCityBox("houston", "Houston")}
+          {this.renderCityBox("atlanta", "Atlanta")}
+
+          {/* Indian Cities */}
+          {this.renderCityBox("delhi", "Delhi")}
+          {this.renderCityBox("mumbai", "Mumbai")}
+          {this.renderCityBox("bangalore", "Bangalore")}
+
+          {/* Other Important Cities */}
+          {this.renderCityBox("tokyo", "Tokyo")}
+          {this.renderCityBox("sydney", "Sydney")}
+          {this.renderCityBox("beijing", "Beijing")}
+          {this.renderCityBox("dubai", "Dubai")}
+          {this.renderCityBox("cape-town", "Cape Town")}
         </div>
       </>
     );
