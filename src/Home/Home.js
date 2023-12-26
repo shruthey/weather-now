@@ -33,8 +33,16 @@ class Home extends React.Component {
 
   render() {
     return (
-      <>
-        {/* ... existing code ... */}
+      <div className="home-container">
+        <header>
+          <h1>Discover Your Adventure</h1>
+        </header>
+
+        <p>
+          Embark on a journey like never before! Share a location and a month or
+          season, and let us unveil the perfect time to experience your dream
+          destination. 🌍✈️
+        </p>
         <div className="city-container">
           {/* European Cities */}
           {this.renderCityBox("paris", "Paris")}
@@ -65,7 +73,7 @@ class Home extends React.Component {
           {this.renderCityBox("dubai", "Dubai")}
           {this.renderCityBox("cape-town", "Cape Town")}
         </div>
-      </>
+      </div>
     );
   }
 }
