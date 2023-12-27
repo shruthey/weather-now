@@ -13,17 +13,14 @@ class Home extends React.Component {
   }
 
   selectSeason(season) {
-    console.log(season);
     this.setState({ selectedSeason: season, selectedMonth: null });
   }
 
   selectMonth(month) {
-    console.log(month);
     this.setState({ selectedMonth: month });
   }
 
   selectCity() {
-    console.log(document.getElementById("cityInput").value);
     this.setState({ selectedCity: document.getElementById("cityInput").value });
   }
 
@@ -57,7 +54,6 @@ class Home extends React.Component {
 
   render() {
     const handleGoClick = () => {
-      console.log(this.state);
       if (
         this.state.selectedCity &&
         this.state.selectedSeason &&

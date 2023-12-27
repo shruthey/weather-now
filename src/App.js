@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedTime(() => {
-        return moment().format("YYYY-MM-DD");
+        return "2024-01-24";
       });
     }, 1000); // Update every second
     return () => clearInterval(interval);
@@ -41,7 +41,6 @@ const App = () => {
   }, [selectedCity, selectedTime]);
 
   const handleMonthSelection = (months) => {
-    console.log(months);
     setSelectedMonths(months);
   };
 
