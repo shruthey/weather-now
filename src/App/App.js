@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
-import Home from "./Home/Home";
-import Weather from "./Weather/Weather";
-import monthsData from "./monthsData";
+import Home from "../Home/Home";
+import Weather from "../Weather/Weather";
+import monthsData from "../monthsData";
 
 const App = () => {
   const [data, setData] = useState(null);
