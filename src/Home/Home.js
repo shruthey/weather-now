@@ -73,7 +73,8 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <header>
-          <h1>Discover Your Adventure</h1>
+          <h1>Weather Now</h1>
+          <h2>Discover Your Adventure</h2>
         </header>
 
         <p>
