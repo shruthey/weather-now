@@ -1,5 +1,5 @@
 import React from "react";
-import "./Weather.css"; // Import your CSS file for styling
+import "./Weather.scss"; // Import your CSS file for styling
 
 const Weather = ({ data }) => {
   const {

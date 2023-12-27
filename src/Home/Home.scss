@@ -1,0 +1,134 @@
+@import "../variables.scss";
+
+body {
+  background-color: $background-color;
+  /* Add your primary and secondary colors here if needed */
+}
+
+.home-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: $dark-gray; /* Dark gray */
+  color: $dark-gray;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Add a fun font */
+  color: $text-color;
+  background-color: $dark-gray;
+}
+
+p {
+  font-size: 20px;
+  color: $dark-gray;
+  line-height: 1.5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.season-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+  .season-box {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    &.selected {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+.month-container {
+  display: flex;
+  justify-content: space-around;
+
+  .month-box {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    &.selected {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+/* Container for city input */
+.city-input-container {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: $secondary-color;
+
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Input styling */
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin-top: 8px;
+    box-sizing: border-box;
+
+    /* Placeholder styling */
+    &::placeholder {
+      color: #adb5bd;
+    }
+
+    /* Focus styling */
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+  }
+}
+
+/* Button styling */
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+
+  /* Hover effect */
+  &:hover {
+    background-color: #2980b9;
+  }
+}

@@ -3,26 +3,26 @@ import axios from "axios";
 import moment from "moment";
 import Home from "./Home/Home";
 import Weather from "./Weather/Weather";
+import monthsData from "./monthsData";
 
 const App = () => {
   const [data, setData] = useState(null);
   const [selectedCity, setSelectedCity] = useState(null);
-  const [currentTime, setCurrentTime] = useState("");
+  const [selectedMonths, setSelectedMonths] = useState(null);
+  const [selectedTime, setSelectedTime] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime((prevTime) => {
-        var futureDate = moment();
-        futureDate = futureDate.add(14, "days");
-        return futureDate.format("YYYY-MM-DD");
+      setSelectedTime(() => {
+        return moment().format("YYYY-MM-DD");
       });
     }, 1000); // Update every second
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
-    if (selectedCity && currentTime) {
-      const api = `http://api.weatherapi.com/v1/future.json?key=3cf54d57859f4b60a86151337232512&q=${selectedCity}&dt=${currentTime}`;
+    if (selectedTime && selectedCity) {
+      const api = `http://api.weatherapi.com/v1/future.json?key=3cf54d57859f4b60a86151337232512&q=${selectedCity}&dt=${selectedTime}`;
 
       const fetchData = async () => {
         try {
@@ -38,15 +38,20 @@ const App = () => {
 
       fetchData();
     }
-  }, [selectedCity, currentTime]);
+  }, [selectedCity, selectedTime]);
 
-  const handleCitySelection = (city) => {
+  const handleMonthSelection = (months) => {
+    console.log(months);
+    setSelectedMonths(months);
+  };
+
+  const onCitySelect = (city) => {
     setSelectedCity(city);
   };
 
   return (
     <div className="App">
-      <Home onCitySelect={handleCitySelection} />
+      <Home onMonthSelect={handleMonthSelection} onCitySelect={onCitySelect} />
       {data && <Weather data={data} />}
     </div>
   );

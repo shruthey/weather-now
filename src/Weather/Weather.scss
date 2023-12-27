@@ -1,0 +1,58 @@
+.weather-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .location-info {
+    h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+
+  .current-weather,
+  .hourly-forecast {
+    margin-top: 20px;
+  }
+
+  .condition-info {
+    p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+  }
+
+  .hourly-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .hourly-item {
+      width: 30%;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      .hour {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .temp {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
