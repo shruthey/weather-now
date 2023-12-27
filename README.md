@@ -21,7 +21,7 @@ Welcome to Weather Now, the weather app that goes beyond the forecast. Plan your
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/weather-now.git
+   git clone https://github.com/shruthey/weather-now.git
    ```
 
 2. Navigate to the project directory:
@@ -52,7 +52,7 @@ We welcome contributions! If you have ideas for new features or improvements, fe
 
 ## Feedback
 
-If you encounter any issues or have suggestions, please [open an issue](https://github.com/your-username/weather-now/issues).
+If you encounter any issues or have suggestions, please [open an issue](https://github.com/shruthey/weather-now/issues).
 
 ## License
 
